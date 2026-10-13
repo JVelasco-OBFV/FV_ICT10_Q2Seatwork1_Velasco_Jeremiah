@@ -1,12 +1,12 @@
 from pyscript import document
 
 def checkNum(e):
-    name_list1 = ["Jeremy", "Jake", "Juan", "Jane", "John"].lower()
-    name_list2 = ['Salazar','Nolasco','Dela Cruz','Rosario','Makabunga'].lower()
+    name_list1 = ["jeremy taruq", "jake tiangco", "juan nolasco", "jane sebastian", "emmanuel dizon"]
     firstname = document.getElementById("firstname").value
     lastname = document.getElementById("lastname").value
-    message = (f'Sorry {firstname} {lastname}, your name is not found.', f'Yey! Salutations {firstname} {lastname}.')
-    confirm_num = firstname in name_list1
-    confirm_num2 = lastname in name_list2
+    fullname = (f'{firstname} {lastname}')
+    con_name = fullname.lower() #coverts fullname variable into lowercase in order to confirm if the user's input is listed; acts as a decoy variable so that the user's original input will still be displayed
+    confirm_name = con_name in name_list1 
 
-    document.getElementById("output1").innerHTML = message[confirm_num & confirm_num2]
+    message = (f'Sorry {fullname}, your name is not found on the list.', f'Congrats {fullname}! You are now part of the Math Guild.')
+    document.getElementById("output1").innerHTML = message[confirm_name]

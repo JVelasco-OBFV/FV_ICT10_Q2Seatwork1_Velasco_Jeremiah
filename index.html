@@ -6,31 +6,65 @@
     <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
     <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=GFS+Didot&family=Limelight&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pangolin&family=Questrial&display=swap" rel="stylesheet">
     <!--NO AI WAS USED DURING THE MAKING OF THIS PROJECT-->
     <title>ICT 10</title>
     <style>
-        body{text-align: center;}
-        h1{color: rgb(4, 50, 136);}
-        #output1{border: 5px solid rgb(17, 20, 193);box-shadow: 0px 5px 5px rgb(200, 200, 200); height: 500px;border-radius: 10px;font-size: 20px;}
+        body{
+            text-align: center;
+            background: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/powerpoint-math-for-kids-background-design-template-9c7101e6f62f51589b70148f650f4f6e_ee24591b-03a6-48d3-9459-e2da3522b0ef_screen.webp?ts=1778042718');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1, h2{
+            color: rgb(20, 50, 105);
+            font-family: Pangolin, sans;
+        }
+        label, input{
+          font-family: Pangolin, sans;  
+        }
+        #output1{
+            border-left: 10px solid rgb(0, 183, 255);
+            box-shadow: 0px 5px 5px rgb(195, 137, 228); 
+            height: auto;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+            font-size: 15px;
+            font-family: Pangolin, sans;
+        }
+        #sign_in{
+            width: 470px;
+            height: auto;
+            margin-top: 130px;
+            margin-bottom: auto;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: rgb(110, 110, 239);
+            box-shadow: 0px 2px 10px rgb(37, 23, 113); 
+            border-top: 7px solid rgb(68, 29, 160);
+        }
     </style>
 </head>
 <body>
-    <h1>PRACTICE 3</h1>
-    <div class="container">
-    <form action="">
+    <div class="container" id="sign_in">
+    <h1><b>Math Guild Entry</b></h1>
+    <form action="#">
         <label for="firstname">Firstname</label>
-        <input type="text" id="firstname" class="form-control" placeholder="" required>
+        <input type="text" id="firstname" class="form-control" placeholder="Enter your first name here" required>
         <br>
+        <h2><b>+</b></h2>
         <label for="firstname">Lastname</label>
-        <input type="text" id="lastname" class="form-control" placeholder="" required>
+        <input type="text" id="lastname" class="form-control" placeholder="Enter you last name here" required>
         <br>
+        <h2><b>=</b></h2>
         <div class="d-grid gap-1">
-        <button type="button" class="btn btn-success" py-click="checkNum">Enter</button>
-        </div>
+        <button type="button" class="btn btn-outline-warning" py-click="checkNum" style="font-family: Pangolin, sans; border: 3px solid rgb(62, 32, 174);">Enter</button>
     </form>
     <br>
     <div id="output1"></div>
     <script type="py" src="main.py"></script>
     </div>
+</div>
+
 </body>
 </html>
